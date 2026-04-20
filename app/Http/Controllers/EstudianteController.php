@@ -22,7 +22,7 @@ class EstudianteController extends Controller
      */
     public function create()
     {
-        $carreras = Carrera::all();
+        $carreras = Carrera::get();
         return view('estudiantes.create', compact('carreras'));
     }
 
@@ -75,7 +75,7 @@ class EstudianteController extends Controller
     public function edit(string $id)
     {
         $estudiante = Estudiante::findOrFail($id);
-        $carreras = Carrera::all();
+        $carreras = Carrera::get();
         return view('estudiantes.edit', compact('estudiante', 'carreras'));
     }
 

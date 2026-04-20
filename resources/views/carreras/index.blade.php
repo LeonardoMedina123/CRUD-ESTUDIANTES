@@ -37,6 +37,8 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{ $carreras->links() }}
     </div>
 </div>
 @endsection

@@ -12,7 +12,7 @@ class CarreraController extends Controller
      */
     public function index()
     {
-        $carreras = Carrera::all();
+        $carreras = Carrera::paginate(10);
         return view('carreras.index', compact('carreras'));
     }
 
